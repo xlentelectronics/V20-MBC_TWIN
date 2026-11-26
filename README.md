@@ -68,15 +68,15 @@ Press `S` to display the selected file as text. `.COM`, `.CMD` or `tokenized` (l
 
 The viewer is intended for text files. Non-printing control characters may appear as dots or spaces.
 
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_SHOW.jpg" width="500">
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_SHOW.jpg" width="450">
 
 ## Help
 
 When you type `H` the Help screen will open. In the Help screen the several switches and commands are explained.
 
 <p align="center">
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_HELP.jpg" width="375">
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_HELP.jpg" width="367">
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_HELP.jpg" width="385">
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_HELP.jpg" width="377">
 </p>
 
 ## Requirements
