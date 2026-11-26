@@ -95,7 +95,7 @@ Compile the program as a CMD file in Turbo Pascal
 - Digital Research Pascal/MT+ (80) v5.6.1
 - Tera Term or an 80 × 24 ANSI/VT-compatible terminal
 
-The source code consist of 6 `.PAS files`. Due to the limitation of RAM in 8080 mode the files must not exceed 325 lines otherwise you may run in a compile error _Invalid opcode detected_.You have to compile every `.PAS` file and link everything together to create the COM file.
+The source code consist of 6 `.PAS` files. Due to the limitation of RAM in 8080 mode the files must not exceed 325 lines otherwise you may run in a compile error _Invalid opcode detected_.You have to compile every `.PAS` file and link everything together to create the COM file.
 
 
 ## Build Environment
@@ -116,7 +116,7 @@ This project is licensed under the [MIT License](LICENSE) - see the `LICENSE` fi
 
 ## Version
 
-### TWINV20:
+### TWINV20
 
 Version v1.0 : Original TWIN for Z80 CP/M based systems.
 
