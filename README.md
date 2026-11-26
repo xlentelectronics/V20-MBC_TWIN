@@ -1,10 +1,10 @@
 ## TWINV20 & TWINC22 - V20-MBC File Manager for CP/M-86 v1.1 & CP/M v2.2
 
-TWINV20.CMD and TWINC22.COM are a two-panel file manager for V20-MBC running CP/M-86 v1.1. and CP/M v2.2. Its layout and keyboard-driven workflow are inspired by the classic Norton Commander file manager.
+TWINV20.CMD and TWINC22.COM are a two-panel file manager for V20-MBC running CP/M-86 v1.1. and CP/M 2.2. Its layout and keyboard-driven workflow are inspired by the classic Norton Commander file manager.
 
 ## Remarks
 
-The application TWINV20 is written in Borland Turbo Pascal 3.0B for CP/M-86 v1.1, V20-MBC running 8086 mode. The application TWINC22 is written in Digital Research Pascal/MT+ (80) v5.6.1 for CP/M v2.2, V20-MBC running 8080 mode. It uses a two-panel interface to browse drives and perform common file operations without leaving the program.
+The application TWINV20 is written in Borland Turbo Pascal 3.0B for CP/M-86 v1.1, V20-MBC running 8086 mode. The application TWINC22 is written in Digital Research Pascal/MT+ (80) v5.6.1 for CP/M 2.2, V20-MBC running 8080 mode. It uses a two-panel interface to browse drives and perform common file operations without leaving the program.
 
 ## Main screen
 
@@ -39,7 +39,7 @@ The panels use different heading colors to distinguish the active panel from the
 - `Show` : Opens the selected non-`.COM` file in the text viewer.
 - `Log Drive` : Prompts for a drive letter from A: to P: and reloads the active panel. Press `ESC` to cancel.
 - `Help` : Shows the HELP screen
-- `Quit` : Leaves TWINxxx and returns to CP/M-86 or CP/M v2.2.
+- `Quit` : Leaves TWINxxx and returns to CP/M-86 or CP/M 2.2.
 
 The arrow keys are read as ANSI/VT escape sequences.
 Their behavior therefore depends on the terminal sending the expected cursor-key sequences.
@@ -58,7 +58,7 @@ By default the setting is 90 x 40.
 
 Each panel displays up to 240 file names. The file names use the CP/M 8.3 format, up to eight characters for the name and three for the extension, separated by a period.
 
-The size shown for each file is calculated from its CP/M directory entries. When a file uses multiple extents, TWIN combines those entries into one row. Sizes are displayed in whole KB. Under CP/M-86 v1.1 and CP/M v2.2, the directory records describe the file in 128-byte records, so the displayed size is an estimate rounded to KB.
+The size shown for each file is calculated from its CP/M directory entries. When a file uses multiple extents, TWIN combines those entries into one row. Sizes are displayed in whole KB. Under CP/M-86 v1.1 and CP/M 2.2, the directory records describe the file in 128-byte records, so the displayed size is an estimate rounded to KB.
 
 TWINV20 and TWINC22 uses a flat CP/M directory listing; it does not provide subdirectory navigation.
 
@@ -91,7 +91,7 @@ Compile `TWINV20.PAS` as a `CMD` file in Turbo Pascal
 
 ### TWINC22.COM
 - V20-MBC
-- CP/M v2.2
+- CP/M 2.2
 - Digital Research Pascal/MT+ (80) v5.6.1
 - Tera Term or an 80 × 24 ANSI/VT-compatible terminal
 
@@ -103,16 +103,17 @@ No modern cross-compilers or emulators were used in the making of this binary. T
 
 ### MTPLUS Compiler
 
-The content on the V20-MBC SD card does not by default include the MTPLUS compiler from Digital Research Pascal/MT+ (80) v5.6.1. You must first copy MTPLUS files to the SD card before you can start compiling. The first empty drive on the SD card is F:, DS0N05.DSK. Use the Windows tool CpmtoolsGUI.exe to copy the MTPLUS files to the SD card.
-
-The source code of TWINC22 consist of 6 `TW22xxx.PAS` files. Due to the limitation of RAM in 8080 mode the files must not exceed 325 lines of code, otherwise you may run into a compile error _Invalid opcode detected_! You have to compile every `TW22xxx.PAS` file to a `ERL` file and link all `ERL` files together to create the COM file. During link the libraries FPREALS.ERL and PASLIB.ERL, both with the /S parameter, needs to be included. 
+By default, the V20-MBC SD card image does not include the MTPLUS compiler from Digital Research Pascal/MT+ (80) v5.6.1. You must copy the Pascal/MT+ files to the SD card before you can start compiling. The first empty drive on the SD card is F: (DS0N05.DSK). You can use the Windows tool `CpmtoolsGUI.exe` to copy the files onto this disk image.
+The source code of TWINC22 consists of six `TW22xxx.PAS` files. Due to the 64 KB RAM limitation in 8080 mode, individual source files should not exceed ~325 lines of code; otherwise, the compiler may run out of workspace memory and crash with an _Invalid opcode detected_! error. You need to compile each `TW22xxx.PAS` file into an `.ERL` object file and then link all `.ERL` object files together to create the final `.COM` executable. During linking, the `FPREALS.ERL` and `PASLIB.ERL` libraries must both be included with the `/S` (search) parameter. 
 
 #### How to compile
-Assuming MTPLUS is placed on F, copy all `TW22xxx.PAS` files to F as well. You have to compile the files by file. The command to compile `MTPLUS TW22MAIN` without the .PAS!! Do this for all the `.PAS` files. After compiling, link all `ERL` files via `LINKMT TWINC22=TW22MAIN,TW22MOD1,TW22MOD2,TW22OPS1,TW22OPS2,TW22OPS3,FPREALS/S,PASLIB/S`
+Assuming the Pascal/MT+ files are placed on drive F:, copy all `TW22xxx.PAS` source files to F: as well. You need to compile the files one by one. For example, run MTPLUS TW22MAIN (without the `.PAS` extension!), and repeat this for all six `.PAS` files. Once compiled, link all `.ERL` object files together using:
+`LINKMT TWINC22=TW22MAIN,TW22MOD1,TW22MOD2,TW22OPS1,TW22OPS2,TW22OPS3,FPREALS/S,PASLIB/S`
+
 
 ## History
 
-The original idea for a Norton Commander look a like file manager for CP/M is from Ralf Kammer, who developed TWIN for Z80 based CP/M systems, https://github.com/RalliKam.TWIN works well with CP/M-3 on the Z80-MBC2, but it did not work on the V20-MBC with CP/M-86 or CP/M v2.2. After the successful port to CP/M-86 v1.1 modifications and improvements were done. After that was done, the challenge was to have as well a TWIN version working on the V20-MBC in 8080 mode with CP/M- v2.2. The end result is here on GitHub. The behavior of both TWIN file managers are exactly the same.
+The original idea for a Norton Commander look-alike file manager for CP/M came from Ralf Kammel, who developed TWIN for Z80-based CP/M systems, https://github.com/RalliKam. While TWIN works well with CP/M 3 on the Z80-MBC2, it did not work on the V20-MBC under CP/M-86 or CP/M 2.2. Following a successful port to CP/M-86 v1.1, several modifications and improvements were implemented. After that, the next challenge was to get a version of TWIN running on the V20-MBC in 8080 mode with CP/M 2.2. The final result is available here on GitHub, and the behavior of both TWIN file managers is identical.
 
 ## License
 
@@ -153,7 +154,7 @@ Version v2.1 :
 Version v1.0 : Original TWIN for Z80 CP/M based systems.
 
 Version 2.0 : TWINC22 By X-Lent Electronics, November 2026, for V20-MBC.
-  - v2.0 ported to CP/M v2.2 for V20-MBC in8080 mode with all feature from TWINV20
+  - v2.0 ported to CP/M 2.2 for V20-MBC in8080 mode with all feature from TWINV20
 
 
 
