@@ -141,7 +141,7 @@ Version v2.0 : TWINV20 By X-Lent Electronics, November 2026, for V20-MBC.
   - Added status message COM/CMD with tokenized files cannot be displayed
   - Added `H Help` procedure. Help screen in new window
   - Change Commandline look and feel
-  - `/O` or `/o` to show date is not supported in CP/m-86 1.1
+  - `/O` or `/o` to show date is not supported in CP/M-86 v1.1
     A statusline messages is displayed when /O or /o is used 
 
 Version v2.1 :
