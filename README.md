@@ -76,7 +76,7 @@ When you type `H` the Help screen will open. In the Help screen the several swit
 
 <p align="center">
 <img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_HELP.jpg" width="475">
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_HELP.jpg" width="450">
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_HELP.jpg" width="460">
 </p>
 
 ## Requirements
