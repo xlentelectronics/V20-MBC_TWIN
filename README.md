@@ -104,12 +104,11 @@ No modern cross-compilers or emulators were used in the making of this binary. T
 ### MTPLUS Compiler
 
 By default, the V20-MBC SD card image does not include the MTPLUS compiler from Digital Research Pascal/MT+ (80) v5.6.1. You must copy the Pascal/MT+ files to the SD card before you can start compiling. The first empty drive on the SD card is F: (DS0N05.DSK). You can use the Windows tool `CpmtoolsGUI.exe` to copy the files onto this disk image.
-The source code of TWINC22 consists of six `TW22xxx.PAS` files. Due to the 64 KB RAM limitation in 8080 mode, individual source files should not exceed ~325 lines of code; otherwise, the compiler may run out of workspace memory and crash with an _Invalid opcode detected_! error. You need to compile each `TW22xxx.PAS` file into an `.ERL` object file and then link all `.ERL` object files together to create the final `.COM` executable. During linking, the `FPREALS.ERL` and `PASLIB.ERL` libraries must both be included with the `/S` (search) parameter. 
+The source code of TWINC22 consists of six `TW22xxx.PAS` files. Due to the 64 KB RAM limitation in 8080 mode, individual source files should not exceed ~325 lines of code. Otherwise, the compiler may run out of workspace memory and crash with an _Invalid opcode detected!_ error. You need to compile each `TW22xxx.PAS` file into an `.ERL` object file and then link all `.ERL` object files together to create the final `.COM` executable. During linking, the `FPREALS.ERL` and `PASLIB.ERL` libraries must both be included with the `/S` (search) parameter. 
 
 #### How to compile
 Assuming the Pascal/MT+ files are placed on drive F:, copy all `TW22xxx.PAS` source files to F: as well. You need to compile the files one by one. For example, run MTPLUS TW22MAIN (without the `.PAS` extension!), and repeat this for all six `.PAS` files. Once compiled, link all `.ERL` object files together using:
 `LINKMT TWINC22=TW22MAIN,TW22MOD1,TW22MOD2,TW22OPS1,TW22OPS2,TW22OPS3,FPREALS/S,PASLIB/S`
-
 
 ## History
 
@@ -119,7 +118,7 @@ The original idea for a Norton Commander look-alike file manager for CP/M came f
 
 This project is licensed under the [MIT License](LICENSE) - see the `LICENSE` file for details.
 
-## Version
+## Version history
 
 ### TWINV20
 
