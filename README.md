@@ -68,7 +68,7 @@ Press `S` to display the selected file as text. `.COM`, `.CMD` or `tokenized` (l
 
 The viewer is intended for text files. Non-printing control characters may appear as dots or spaces.
 
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/TWINV20_SHOW.jpg" width="600">
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_SHOW.jpg" width="500">
 
 ## Help
 
