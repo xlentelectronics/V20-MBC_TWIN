@@ -25,8 +25,8 @@ TWINV20 and TWINC22 has been developed to provide an optimal view when using ter
 The panels use different heading colors to distinguish the active panel from the inactive one. The file lists use a blue background with bold white text, the selected name is shown in inverse video. The interface uses ANSI/VT escape sequences for colors and highlighting.
 
 <p align="center">
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_MAIN.jpg" width="350" />
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_MAIN.jpg" width="350" />
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_MAIN.jpg" width="375" />
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_MAIN.jpg" width="375" />
 </p>
 
 ## Keyboard commands
