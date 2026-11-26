@@ -39,7 +39,7 @@ The panels use different heading colors to distinguish the active panel from the
 - `Show` : Opens the selected non-`.COM` file in the text viewer.
 - `Log Drive` : Prompts for a drive letter from A: to P: and reloads the active panel. Press `ESC` to cancel.
 - `Help` : Shows the HELP screen
-- `Quit` : Leaves TWIN and returns to CP/M-86 or CP/M v2.2.
+- `Quit` : Leaves TWINxxx and returns to CP/M-86 or CP/M v2.2.
 
 The arrow keys are read as ANSI/VT escape sequences.
 Their behavior therefore depends on the terminal sending the expected cursor-key sequences.
@@ -58,13 +58,13 @@ By default the setting is 90 x 40.
 
 Each panel displays up to 240 file names. The file names use the CP/M 8.3 format, up to eight characters for the name and three for the extension, separated by a period.
 
-The size shown for each file is calculated from its CP/M directory entries. When a file uses multiple extents, TWIN combines those entries into one row. Sizes are displayed in whole KB. Under CP/M 2.2, the directory records describe the file in 128-byte records, so the displayed size is an estimate rounded to KB. CP/M 3.0 also stores the byte count used in the final record.
+The size shown for each file is calculated from its CP/M directory entries. When a file uses multiple extents, TWIN combines those entries into one row. Sizes are displayed in whole KB. Under CP/M-86 v1.1 and CP/M v2.2, the directory records describe the file in 128-byte records, so the displayed size is an estimate rounded to KB.
 
-TWINV20 uses a flat CP/M directory listing; it does not provide subdirectory navigation.
+TWINV20 and TWINC22 uses a flat CP/M directory listing; it does not provide subdirectory navigation.
 
 ## Text viewer
 
-Press `S` to display the selected file as text. `.COM`, `.CMD` or `tokenized` (like .`BAS`) files are not supported by the viewer. The viewer shows a page at a time and waits for a key when the screen is full. Press `Q` or `ESC` at the page prompt to leave the viewer. At the EOL of a file you have to press a key to return to TWINV20.
+Press `S` to display the selected file as text. `.COM`, `.CMD` or `tokenized` (like .`BAS`) files are not supported by the viewer. The viewer shows a page at a time and waits for a key when the screen is full. Press `Q` or `ESC` at the page prompt to leave the viewer. At the EOL of a file you have to press a key to return to TWIN main screen.
 
 The viewer is intended for text files. Non-printing control characters may appear as dots or spaces.
 
@@ -87,7 +87,7 @@ When you type `H` the Help screen will open. In the Help screen the several swit
 - Borland Turbo Pascal 3.0B for CP/M-86 v1.1
 - Tera Term or an 80 × 24 ANSI/VT-compatible terminal
 
-Compile the program as a CMD file in Turbo Pascal
+Compile `TWINV20.PAS` as a `CMD` file in Turbo Pascal
 
 ### TWINC22.COM
 - V20-MBC
@@ -95,8 +95,7 @@ Compile the program as a CMD file in Turbo Pascal
 - Digital Research Pascal/MT+ (80) v5.6.1
 - Tera Term or an 80 × 24 ANSI/VT-compatible terminal
 
-The source code consist of 6 `.PAS` files. Due to the limitation of RAM in 8080 mode the files must not exceed 325 lines otherwise you may run in a compile error _Invalid opcode detected_. You have to compile every `.PAS` file and link everything together to create the COM file.
-
+Compile the `TW22xxx.PAS` as a `ERL` file and link the `ERL` files as a `COM` with MTPLUS Pascal 
 
 ## Build Environment
 
@@ -104,11 +103,16 @@ No modern cross-compilers or emulators were used in the making of this binary. T
 
 ### MTPLUS Compiler
 
-The content on the V20-MBC SD card does not by default include MTPLUS compiler from Digital Research Pascal/MT+ (80) v5.6.1. You must first copy MTPLUS to the SD card to be able to compile. The first empty drive on the SD card is F:, DS0N05.DSK.
+The content on the V20-MBC SD card does not by default include the MTPLUS compiler from Digital Research Pascal/MT+ (80) v5.6.1. You must first copy MTPLUS files to the SD card before you can start compiling. The first empty drive on the SD card is F:, DS0N05.DSK. Use the Windows tool CpmtoolsGUI.exe to copy the MTPLUS files to the SD card.
+
+The source code of TWINC22 consist of 6 `TW22xxx.PAS` files. Due to the limitation of RAM in 8080 mode the files must not exceed 325 lines of code, otherwise you may run into a compile error _Invalid opcode detected_! You have to compile every `TW22xxx.PAS` file to a `ERL` file and link all `ERL` files together to create the COM file. During link the libraries FPREALS.ERL and PASLIB.ERL, both with the /S parameter, needs to be included. 
+
+#### How to compile
+Assuming MTPLUS is placed on F, copy all `TW22xxx.PAS` files to F as well. You have to compile the files by file. The command to compile `MTPLUS TW22MAIN` without the .PAS!! Do this for all the `.PAS` files. After compiling, link all `ERL` files via `LINKMT TWINC22=TW22MAIN,TW22MOD1,TW22MOD2,TW22OPS1,TW22OPS2,TW22OPS3,FPREALS/S,PASLIB/S`
 
 ## History
 
-The original idea for a Norton Commander look a like file manager for CP/M is from Ralf Kammer, who developed TWIN for Z80 based CP/M systems, https://github.com/RalliKam.TWIN works well with CP/M-3 on the Z80-MBC2, but it did not work on the V20-MBC with CP/M-86 or CP/M v2.2. After the successful port to CP/M-86 v1.1 modifications and improvements were done. After that was done, the challenge was to have as well a TWIN version working on the V20-MBC in 8080 mode with CP/M- v2.2. The end result is here on GitHub.  The behavior of both TWIN file managers are exactly the same.
+The original idea for a Norton Commander look a like file manager for CP/M is from Ralf Kammer, who developed TWIN for Z80 based CP/M systems, https://github.com/RalliKam.TWIN works well with CP/M-3 on the Z80-MBC2, but it did not work on the V20-MBC with CP/M-86 or CP/M v2.2. After the successful port to CP/M-86 v1.1 modifications and improvements were done. After that was done, the challenge was to have as well a TWIN version working on the V20-MBC in 8080 mode with CP/M- v2.2. The end result is here on GitHub. The behavior of both TWIN file managers are exactly the same.
 
 ## License
 
