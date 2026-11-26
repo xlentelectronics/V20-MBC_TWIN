@@ -75,13 +75,13 @@ The viewer is intended for text files. Non-printing control characters may appea
 When you type `H` the Help screen will open. In the Help screen the several switches and commands are explained.
 
 <p align="center">
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/TWINV20_HELP.jpg" width="475">
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/TWINC22_HELP.jpg" width="475">
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_HELP.jpg" width="475">
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_HELP.jpg" width="475">
 </p>
 
 ## Requirements
 
-### TWINV20.CMD:
+### TWINV20.CMD
 - V20-MBC
 - CP/M-86 v1.1
 - Borland Turbo Pascal 3.0B for CP/M-86 v1.1
@@ -89,7 +89,7 @@ When you type `H` the Help screen will open. In the Help screen the several swit
 
 Compile the program as a CMD file in Turbo Pascal
 
-### TWINC22.COM:
+### TWINC22.COM
 - V20-MBC
 - CP/M v2.2
 - Digital Research Pascal/MT+ (80) v5.6.1
