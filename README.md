@@ -1,4 +1,4 @@
-## TWINV20 & TWINC22 - V20-MBC File Manager for CP/M-86 v1.1 & CP/M v2.2
+## TWINV20 & TWINC22 - V20-MBC File Manager CP/M-86 v1.1 & CP/M 2.2
 
 TWINV20.CMD and TWINC22.COM are a two-panel file manager for V20-MBC running CP/M-86 v1.1. and CP/M 2.2. Its layout and keyboard-driven workflow are inspired by the classic Norton Commander file manager.
 
