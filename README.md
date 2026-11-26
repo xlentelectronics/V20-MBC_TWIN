@@ -25,8 +25,8 @@ TWINV20 and TWINC22 has been developed to provide an optimal view when using ter
 The panels use different heading colors to distinguish the active panel from the inactive one. The file lists use a blue background with bold white text, the selected name is shown in inverse video. The interface uses ANSI/VT escape sequences for colors and highlighting.
 
 <p align="center">
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_MAIN.jpg" width="375" />
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_MAIN.jpg" width="375" />
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_MAIN.jpg" width="385" />
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_MAIN.jpg" width="385" />
 </p>
 
 ## Keyboard commands
@@ -75,8 +75,8 @@ The viewer is intended for text files. Non-printing control characters may appea
 When you type `H` the Help screen will open. In the Help screen the several switches and commands are explained.
 
 <p align="center">
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_HELP.jpg" width="385">
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_HELP.jpg" width="378">
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_HELP.jpg" width="395">
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_HELP.jpg" width="388">
 </p>
 
 ## Requirements
