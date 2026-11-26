@@ -50,7 +50,7 @@ At start-up you can enter use the `/S` (or `/s`) switch, TWINV20.CMD /S or TWINC
 By default the setting is 90 x 40.
 
 <p align="center">
-<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_START.jpg" width="40%" >
+<img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINV20/Images/TWINV20_START.jpg">
 <img src="https://github.com/xlentelectronics/V20-MBC_TWIN/blob/main/TWINC22/Images/TWINC22_START.jpg">
 </p>
 
